@@ -1,0 +1,19 @@
+# Netlify configuration for VinVerse
+[build]
+  command = "npm run build"
+  functions = "netlify/functions"
+  publish = "dist"
+
+# Proxy API requests to Railway backend to avoid CORS issues
+[[redirects]]
+  from = "/api/*"
+  to = "https://vinverse-backend.up.railway.app/api/:splat"
+  status = 200
+  force = true
+  headers = {X-From = "Netlify"}
+
+# SPA fallback - serve index.html for all routes
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
