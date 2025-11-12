@@ -3,6 +3,7 @@
  */
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import { BiRocketTakeoff } from 'bootstrap-icons/react'
 
 const CTASection = () => {
   return (
@@ -24,13 +25,14 @@ const CTASection = () => {
           <p className="text-base sm:text-lg text-white/60 mb-6 sm:mb-8 max-w-2xl mx-auto">
             Create tournaments, build your team, connect with players, get AI-powered insights, and dominate the arena.
           </p>
-          <Link to="/signup">
+          <Link to="/signup" aria-label="Get Early Access - Sign up for VinVerse">
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-neon-purple to-pink-500 rounded-lg text-base sm:text-lg font-semibold glow-button"
+              className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 min-h-[48px] min-w-[200px] bg-gradient-to-r from-neon-purple to-pink-500 rounded-lg text-base sm:text-lg font-semibold glow-button focus:outline-none focus:ring-4 focus:ring-neon-purple/50 transition-all"
+              aria-label="Get Early Access - Sign up for VinVerse"
             >
-              Get Early Access 🚀
+              Get Early Access <BiRocketTakeoff className="inline ml-1" />
             </motion.button>
           </Link>
         </div>

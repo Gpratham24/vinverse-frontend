@@ -30,7 +30,7 @@ function App() {
     <Router>
       <div className="min-h-screen bg-gradient-to-b from-indigo-900 via-black to-black flex flex-col">
         <Navbar />
-        <main className="flex-1">
+        <main className="flex-1" role="main">
           <Routes>
             {/* Public routes */}
             <Route path="/" element={<LandingPage />} />

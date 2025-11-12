@@ -234,14 +234,28 @@ const ChatPage = () => {
     };
 
     ws.onerror = (error) => {
-      console.error("WebSocket error:", error);
+      // Silently handle WebSocket errors - don't spam console
       setIsConnected(false);
+      // Only log in development mode
+      if (import.meta.env.DEV) {
+        console.warn(
+          "WebSocket connection issue (this is normal if backend is not running)"
+        );
+      }
     };
 
     ws.onclose = (event) => {
       setIsConnected(false);
       setSocket(null);
       socketRef.current = null;
+      // Silently handle close - don't log unless in development
+      if (import.meta.env.DEV && event.code !== 1000) {
+        console.warn(
+          "WebSocket closed:",
+          event.code,
+          event.reason || "Connection closed"
+        );
+      }
     };
 
     return () => {

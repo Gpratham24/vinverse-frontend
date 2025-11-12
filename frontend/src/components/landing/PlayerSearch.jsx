@@ -94,7 +94,8 @@ const PlayerSearch = () => {
                   value={searchQuery}
                   onChange={handleInputChange}
                   placeholder="Enter username, gamer tag, or VIN ID..."
-                  className="w-full px-6 py-4 bg-black/50 border-2 border-white/20 rounded-xl focus:outline-none focus:border-neon-purple focus:ring-4 focus:ring-neon-purple/20 text-white placeholder-white/50 transition-all shadow-lg"
+                  className="w-full px-6 py-4 min-h-[48px] bg-black/50 border-2 border-white/20 rounded-xl focus:outline-none focus:border-neon-purple focus:ring-4 focus:ring-neon-purple/20 text-white placeholder-white/50 transition-all shadow-lg"
+                  aria-label="Search for players by username, gamer tag, or VIN ID"
                 />
                 {searchQuery && (
                   <motion.button
@@ -116,7 +117,8 @@ const PlayerSearch = () => {
                 whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(147, 51, 234, 0.5)" }}
                 whileTap={{ scale: 0.95 }}
                 disabled={searchQuery.trim().length < 2}
-                className="px-8 py-4 bg-gradient-to-r from-neon-purple to-pink-500 rounded-xl font-semibold glow-button disabled:opacity-50 disabled:cursor-not-allowed shadow-lg"
+                className="px-8 py-4 min-h-[48px] min-w-[120px] bg-gradient-to-r from-neon-purple to-pink-500 rounded-xl font-semibold glow-button disabled:opacity-50 disabled:cursor-not-allowed shadow-lg focus:outline-none focus:ring-4 focus:ring-neon-purple/50 transition-all"
+                aria-label="Search for players"
               >
                 Search
               </motion.button>

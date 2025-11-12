@@ -1,121 +1,143 @@
 /**
  * Feature Grid - Separates "Live Now" from "Coming Soon" features.
  */
-import { motion } from 'framer-motion'
-import { Link } from 'react-router-dom'
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import {
+  BiTrophy,
+  BiPeople,
+  BiPhone,
+  BiCpu,
+  BiChat,
+  BiTargetLock,
+  BiBarChart,
+  BiCheck,
+  BiRobot,
+  BiGift,
+  BiSparkles,
+  BiFilm,
+  BiShieldCheck,
+  BiCameraVideo,
+  BiStar,
+  BiLink,
+} from "bootstrap-icons/react";
 
 const FeatureGrid = () => {
   // Live Now features (functional)
   const liveFeatures = [
     {
-      title: 'Tournaments',
-      description: 'Create, view, and manage esports tournaments',
-      icon: '🏆',
-      status: 'live',
-      link: '/tournaments',
+      title: "Tournaments",
+      description: "Create, view, and manage esports tournaments",
+      icon: BiTrophy,
+      status: "live",
+      link: "/tournaments",
     },
     {
-      title: 'GamerLink',
-      description: 'Connect with players, follow, and build your network',
-      icon: '🔗',
-      status: 'live',
-      link: '/feed',
+      title: "GamerLink",
+      description: "Connect with players, follow, and build your network",
+      icon: BiLink,
+      status: "live",
+      link: "/feed",
     },
     {
-      title: 'Team Finder',
-      description: 'Find teammates and join competitive teams',
-      icon: '👥',
-      status: 'live',
-      link: '/team-finder',
+      title: "Team Finder",
+      description: "Find teammates and join competitive teams",
+      icon: BiPeople,
+      status: "live",
+      link: "/team-finder",
     },
     {
-      title: 'Social Feed',
-      description: 'Share posts, like, and comment with the community',
-      icon: '📱',
-      status: 'live',
-      link: '/feed',
+      title: "Social Feed",
+      description: "Share posts, like, and comment with the community",
+      icon: BiPhone,
+      status: "live",
+      link: "/feed",
     },
     {
-      title: 'AI Insights Dashboard',
-      description: 'AI-powered match analysis, win predictions, and performance metrics',
-      icon: '🧠',
-      status: 'live',
-      link: '/dashboard',
+      title: "AI Insights Dashboard",
+      description:
+        "AI-powered match analysis, win predictions, and performance metrics",
+      icon: BiCpu,
+      status: "live",
+      link: "/dashboard",
     },
     {
-      title: 'Live Chat',
-      description: 'Real-time communication with players via WebSocket',
-      icon: '💬',
-      status: 'live',
-      link: '/dashboard',
+      title: "Live Chat",
+      description: "Real-time communication with players via WebSocket",
+      icon: BiChat,
+      status: "live",
+      link: "/dashboard",
     },
     {
-      title: 'Smart Matchmaking',
-      description: 'AI algorithm to find perfect teammates based on Elo, win rate, and synergy',
-      icon: '🎯',
-      status: 'live',
-      link: '/dashboard',
+      title: "Smart Matchmaking",
+      description:
+        "AI algorithm to find perfect teammates based on Elo, win rate, and synergy",
+      icon: BiTargetLock,
+      status: "live",
+      link: "/dashboard",
     },
     {
-      title: 'Leaderboards',
-      description: 'Compete for top rankings with animated leaderboards and tiers',
-      icon: '📊',
-      status: 'live',
-      link: '/dashboard',
+      title: "Leaderboards",
+      description:
+        "Compete for top rankings with animated leaderboards and tiers",
+      icon: BiBarChart,
+      status: "live",
+      link: "/dashboard",
     },
-  ]
+  ];
 
   // Coming Soon features
   const comingSoonFeatures = [
     {
-      title: 'AI Player Advisor',
-      description: 'Get personalized recommendations for best role and teammate matches',
-      icon: '🤖',
-      status: 'coming-soon',
+      title: "AI Player Advisor",
+      description:
+        "Get personalized recommendations for best role and teammate matches",
+      icon: BiRobot,
+      status: "coming-soon",
     },
     {
-      title: 'Rewards System',
-      description: 'Earn badges, XP, and unlock exclusive rewards',
-      icon: '🎁',
-      status: 'coming-soon',
+      title: "Rewards System",
+      description: "Earn badges, XP, and unlock exclusive rewards",
+      icon: BiGift,
+      status: "coming-soon",
     },
     {
-      title: 'Tournament Brackets',
-      description: 'Visual tournament brackets with live match tracking',
-      icon: '🏅',
-      status: 'coming-soon',
+      title: "Tournament Brackets",
+      description: "Visual tournament brackets with live match tracking",
+      icon: BiSparkles,
+      status: "coming-soon",
     },
     {
-      title: 'Replay Analysis',
-      description: 'Upload and analyze game replays with AI insights',
-      icon: '🎬',
-      status: 'coming-soon',
+      title: "Replay Analysis",
+      description: "Upload and analyze game replays with AI insights",
+      icon: BiFilm,
+      status: "coming-soon",
     },
     {
-      title: 'Team Management',
-      description: 'Advanced team creation, roles, and strategy planning',
-      icon: '⚔️',
-      status: 'coming-soon',
+      title: "Team Management",
+      description: "Advanced team creation, roles, and strategy planning",
+      icon: BiShieldCheck,
+      status: "coming-soon",
     },
     {
-      title: 'Streaming Integration',
-      description: 'Connect your Twitch/YouTube streams to your profile',
-      icon: '📺',
-      status: 'coming-soon',
+      title: "Streaming Integration",
+      description: "Connect your Twitch/YouTube streams to your profile",
+      icon: BiCameraVideo,
+      status: "coming-soon",
     },
     {
-      title: 'Mobile App',
-      description: 'Native iOS and Android apps for on-the-go gaming',
-      icon: '📱',
-      status: 'coming-soon',
+      title: "Mobile App",
+      description: "Native iOS and Android apps for on-the-go gaming",
+      icon: BiPhone,
+      status: "coming-soon",
     },
     {
-      title: 'Pro Team Scouting',
-      description: 'Get discovered by professional esports organizations',
-      icon: '⭐',
-      status: 'coming-soon',
+      title: "Pro Team Scouting",
+      description: "Get discovered by professional esports organizations",
+      icon: BiStar,
+      status: "coming-soon",
     },
-  ]
+  ];
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -125,12 +147,12 @@ const FeatureGrid = () => {
         staggerChildren: 0.1,
       },
     },
-  }
+  };
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
-  }
+  };
 
   return (
     <section className="py-12 sm:py-20 px-4 sm:px-6">
@@ -155,20 +177,28 @@ const FeatureGrid = () => {
               >
                 {feature.link ? (
                   <Link to={feature.link}>
-                    <div className="text-4xl mb-4">{feature.icon}</div>
-                    <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+                    <div className="text-4xl mb-4 flex items-center justify-center">
+                      <feature.icon className="w-10 h-10" />
+                    </div>
+                    <h3 className="text-xl font-semibold mb-2">
+                      {feature.title}
+                    </h3>
                     <p className="text-white/70">{feature.description}</p>
-                    <span className="inline-block mt-4 text-sm text-green-400">
-                      ✓ Available Now
+                    <span className="inline-flex items-center gap-1 mt-4 text-sm text-green-400">
+                      <BiCheck className="w-4 h-4" /> Available Now
                     </span>
                   </Link>
                 ) : (
                   <>
-                    <div className="text-4xl mb-4">{feature.icon}</div>
-                    <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+                    <div className="text-4xl mb-4 flex items-center justify-center">
+                      <feature.icon className="w-10 h-10" />
+                    </div>
+                    <h3 className="text-xl font-semibold mb-2">
+                      {feature.title}
+                    </h3>
                     <p className="text-white/70">{feature.description}</p>
-                    <span className="inline-block mt-4 text-sm text-green-400">
-                      ✓ Available Now
+                    <span className="inline-flex items-center gap-1 mt-4 text-sm text-green-400">
+                      <BiCheck className="w-4 h-4" /> Available Now
                     </span>
                   </>
                 )}
@@ -200,11 +230,13 @@ const FeatureGrid = () => {
                 whileHover={{ scale: 1.05, y: -5 }}
                 className="glass rounded-xl p-6 border border-yellow-500/30 opacity-75"
               >
-                <div className="text-4xl mb-4">{feature.icon}</div>
+                <div className="text-4xl mb-4 flex items-center justify-center">
+                  <feature.icon className="w-10 h-10" />
+                </div>
                 <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                 <p className="text-white/70 text-sm">{feature.description}</p>
-                <span className="inline-block mt-4 text-sm text-yellow-400">
-                  ⏳ Coming Soon
+                <span className="inline-flex items-center gap-1 mt-4 text-sm text-yellow-400">
+                  <BiSparkles className="w-4 h-4" /> Coming Soon
                 </span>
               </motion.div>
             ))}
@@ -212,9 +244,7 @@ const FeatureGrid = () => {
         </motion.div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default FeatureGrid
-
-
+export default FeatureGrid;

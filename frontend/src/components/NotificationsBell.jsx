@@ -4,6 +4,7 @@
 import { useState, useRef, useEffect } from "react";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { motion, AnimatePresence } from "framer-motion";
+import { BiBell } from "bootstrap-icons/react";
 import {
   getNotifications,
   markNotificationRead,
@@ -65,14 +66,15 @@ const NotificationsBell = () => {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         onClick={() => setIsOpen(!isOpen)}
-        className="relative p-2 text-white/80 hover:text-neon-purple transition-colors"
+        className="relative p-2.5 min-w-[44px] min-h-[44px] flex items-center justify-center text-white/80 hover:text-neon-purple hover:bg-white/5 rounded-lg transition-all focus:outline-none focus:ring-2 focus:ring-neon-purple/50"
+        aria-label={`Notifications${unreadCount > 0 ? ` (${unreadCount} unread)` : ''}`}
       >
-        <span className="text-2xl">🔔</span>
+        <BiBell className="text-xl sm:text-2xl" />
         {unreadCount > 0 && (
           <motion.span
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
-            className="absolute top-0 right-0 w-5 h-5 bg-red-500 rounded-full flex items-center justify-center text-xs font-bold"
+            className="absolute top-0.5 right-0.5 w-5 h-5 bg-red-500 rounded-full flex items-center justify-center text-xs font-bold text-white shadow-lg border-2 border-black/20"
           >
             {unreadCount > 9 ? "9+" : unreadCount}
           </motion.span>

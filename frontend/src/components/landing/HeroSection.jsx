@@ -2,6 +2,7 @@
  * Hero Section - Main landing area with animated background and logo.
  */
 import { motion } from "framer-motion";
+import { BiRocketTakeoff, BiTrophy } from "bootstrap-icons/react";
 
 const HeroSection = () => {
   return (
@@ -69,17 +70,19 @@ const HeroSection = () => {
               href="/signup"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-neon-purple to-pink-500 rounded-lg text-base sm:text-lg font-semibold glow-button shadow-2xl"
+              className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 min-h-[48px] min-w-[200px] flex items-center justify-center bg-gradient-to-r from-neon-purple to-pink-500 rounded-lg text-base sm:text-lg font-semibold glow-button shadow-2xl focus:outline-none focus:ring-4 focus:ring-neon-purple/50 transition-all"
+              aria-label="Get Started - Sign up for VinVerse"
             >
-              Get Started 🚀
+              Get Started <BiRocketTakeoff className="inline ml-1" />
             </motion.a>
             <motion.a
               href="/tournaments"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-black/50 border-2 border-neon-purple/50 rounded-lg text-base sm:text-lg font-semibold hover:bg-neon-purple/10 transition-all"
+              className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 min-h-[48px] min-w-[200px] flex items-center justify-center bg-black/50 border-2 border-neon-purple/50 rounded-lg text-base sm:text-lg font-semibold hover:bg-neon-purple/10 focus:outline-none focus:ring-4 focus:ring-neon-purple/50 transition-all"
+              aria-label="View Tournaments"
             >
-              View Tournaments 🏆
+              View Tournaments <BiTrophy className="inline ml-1" />
             </motion.a>
           </motion.div>
         </motion.div>

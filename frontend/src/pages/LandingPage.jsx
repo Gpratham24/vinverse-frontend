@@ -1,24 +1,26 @@
 /**
  * Landing Page - Marketing layer for VinVerse.
- * Features: Hero section, Feature grid, GamerLink showcase, CTA, Footer.
+ * Features: Hero section, How it Works, Feature grid, GamerLink showcase, Testimonials, CTA, Footer.
  */
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import HeroSection from "../components/landing/HeroSection";
+import HowItWorksSection from "../components/landing/HowItWorksSection";
 import FeatureGrid from "../components/landing/FeatureGrid";
 import GamerLinkShowcase from "../components/landing/GamerLinkShowcase";
-import PlayerSearch from "../components/landing/PlayerSearch";
+import TestimonialsSection from "../components/landing/TestimonialsSection";
 import CTASection from "../components/landing/CTASection";
 
 const LandingPage = () => {
   return (
-    <div className="pt-20">
+    <main className="pt-20">
       <HeroSection />
-      <PlayerSearch />
+      <HowItWorksSection />
       <FeatureGrid />
       <GamerLinkShowcase />
+      <TestimonialsSection />
       <CTASection />
-    </div>
+    </main>
   );
 };
 
